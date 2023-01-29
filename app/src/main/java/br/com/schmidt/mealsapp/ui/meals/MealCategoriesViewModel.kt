@@ -8,7 +8,7 @@ import br.com.schmidt.mealsapp.model.response.MealResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class MealCategoriesViewModel(private val repository: MealsRepository = MealsRepository()) :
+class MealCategoriesViewModel(private val repository: MealsRepository = MealsRepository.getInstance()) :
     ViewModel() {
 
     val mealsState = mutableStateOf(emptyList<MealResponse>())
